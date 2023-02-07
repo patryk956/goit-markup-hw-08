@@ -1,0 +1,48 @@
+.clients {
+  &__header {
+    margin-bottom: 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 100%;
+    max-width: 210px;
+    height: 92px;
+    border: 1px solid var(--color-gray);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+      width: 226px;
+      height: 92px;
+    }
+    @include desktop {
+      width: 170px;
+      height: 92px;
+    }
+  }
+  &__item:is(:hover, :focus) {
+    border-color: var(--color-blue);
+    outline: none;
+  }
+  &__icon {
+    fill: var(--color-gray);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__item:is(:hover, :focus) &__icon {
+    fill: var(--color-blue);
+  }
+}

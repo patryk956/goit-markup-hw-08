@@ -1,0 +1,108 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-white);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(150%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__close {
+    font-size: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 19.33px;
+    transition: color 250ms ease-in-out;
+  }
+  &__close:is(:hover, :focus) {
+    color: var(--color-blue);
+  }
+
+  &__nav-list {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 40px 48px 40px;
+  }
+  &__contacts {
+    padding: 48px 40px 48px 40px;
+  }
+  &__nav-link,
+  &__contacts-link {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+
+  &--active {
+    color: var(--color-blue);
+  }
+
+  &__contacts-link {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+  }
+  &__contacts-link--tel {
+    color: var(--color-blue);
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  &__contacts-link--email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: var(--color-gray);
+  }
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 48px;
+  }
+
+  &__social-media-link {
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+
+  &__social-media-link--padding-right {
+    padding-right: 10px;
+  }
+
+  &__social-media-link--padding-left {
+    padding-left: 10px;
+  }
+
+  &__social-media-link--border {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
