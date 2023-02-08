@@ -40,6 +40,7 @@
   }
 
   &__close {
+    padding-top: 3px;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -56,7 +57,9 @@
       right: 35px;
     }
   }
-
+  &__close-svg {
+    padding-top: 2px;
+  }
   &__close:is(:hover, :active, :focus) {
     color: var(--color-blue);
   }
