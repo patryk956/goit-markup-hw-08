@@ -1,8 +1,29 @@
 .project {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  align-items: center;
 
+  &__item {
+    max-width: 450px;
+    margin-top: 30px;
+    width: 100%;
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 370px;
+    }
+  }
+  @include tablet {
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    gap: 30px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item:is(:focus, :hover) &__overlay {
     transform: translateY(0);
     outline: none;
