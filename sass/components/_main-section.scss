@@ -16,6 +16,14 @@
   display: flex;
   justify-content: center;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-section {
+      background-image: url("../images/background-image-mob-x2.jpg");
+    }
+  }
+
   @include tablet {
     background-image: linear-gradient(
         to bottom,
@@ -23,6 +31,14 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/background-image-tab-x1.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .main-section {
+        background-image: url("../images/background-image-tab-x2.jpg");
+      }
+    }
   }
 
   @include desktop {
@@ -37,6 +53,14 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .main-section {
+        background-image: url("../images/background-image-desk-x2.jpg");
+      }
+    }
   }
 
   &__wrapper {
