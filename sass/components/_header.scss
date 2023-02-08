@@ -10,15 +10,14 @@
     padding: 24px 0px 25px;
   }
   &__menu-btn {
-    z-index: 998;
     width: 40px;
     height: 40px;
     outline: none;
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 8px;
-    right: 22px;
+    top: 18px;
+    right: 60px;
     cursor: pointer;
 
     @include tablet {
@@ -127,7 +126,7 @@
     }
   }
   &__contacts-link {
-    color: var(--color-darkgray);
+    color: var(--color-gray);
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0.02em;
