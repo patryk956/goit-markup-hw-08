@@ -81,10 +81,4 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  &__button:is(:hover, :focus, :active) {
-    outline: none;
-    background-color: var(--color-white);
-
-    color: var(--color-blue);
-  }
 }
